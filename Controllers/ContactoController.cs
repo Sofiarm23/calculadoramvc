@@ -7,13 +7,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using calculadoramvc.Models;
 
-namespace calculadoramvc.Controllers
+namespace ContactoController.Controllers
 {
-    public class CalculadoraController : Controller
+    public class ContactoController : Controller
     {
-        private readonly ILogger<CalculadoraController> _logger;
+        private readonly ILogger<ContactoController> _logger;
 
-        public CalculadoraController(ILogger<CalculadoraController> logger)
+        public ContactoController(ILogger<ContactoController> logger)
         {
             _logger = logger;
         }
@@ -23,8 +23,8 @@ namespace calculadoramvc.Controllers
             return View();
         }
 
-        [HttpPost]
-        public IActionResult Calcular(Calculadora objCalculadora){
+        /*[HttpPost]
+        public IActionResult Enviar(Calculadora objCalculadora){
             if ("+".Equals(objCalculadora.Accion)){
                 objCalculadora.Respuesta = objCalculadora.Operador1 + objCalculadora.Operador2;
             }
@@ -38,6 +38,6 @@ namespace calculadoramvc.Controllers
                 objCalculadora.Respuesta = objCalculadora.Operador1 / objCalculadora.Operador2;
             }
             return View("index", objCalculadora);
-        }
+        }*/
     }
 }
